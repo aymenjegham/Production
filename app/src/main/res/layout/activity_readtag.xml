@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lic"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReadTag"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/Host"
+            android:id="@+id/PrintSecure"
+            android:layout_gravity="center_vertical"
+
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="@color/grey_font"
+            android:shadowColor="@color/text_shadow_white"
+            android:shadowDx="-2"
+            android:shadowDy="-2"
+            android:shadowRadius="5"
+            android:layout_marginTop="5dp" />
+
+    </FrameLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/relativeLayoutReadTag"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ReadTag"
+
+        android:layout_weight="0.2">
+
+        <ProgressBar
+            android:id="@+id/progressBarReadTag"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            style="?android:attr/progressBarStyleLarge"
+            android:visibility="visible"
+            android:progressDrawable="@xml/progress"
+            android:indeterminateDrawable="@xml/progress"
+            android:indeterminate="true"
+            android:padding="10dp" />
+
+        <TextView
+            android:id="@+id/textViewReadTag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/progressBarReadTag"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:text="@string/text_wait_read_tag"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="0dp"
+        android:layout_weight="4"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp">
+
+
+
+
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".ReadTag"
+            android:orientation="vertical">
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+
+                android:layout_width="348dp"
+                android:layout_height="62dp"
+                tools:context=".ReadTag"
+                android:orientation="horizontal"
+                android:weightSum="1">
+                <TextView
+                    android:layout_width="122dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/Nom"
+                    android:id="@+id/LabelNom"
+                    android:layout_marginLeft="5dp"
+                    android:ems="10"
+
+                    android:textSize="18dp"
+                    android:textColor="@color/colorPrimary" />
+
+                <EditText
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editNom"
+                    android:inputType="none"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="18dp"
+                    android:layout_weight="0.88" />
+            </LinearLayout>
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+
+                android:layout_width="348dp"
+                android:layout_height="62dp"
+                tools:context=".ReadTag"
+                android:orientation="horizontal"
+                android:weightSum="1">
+                <TextView
+                    android:layout_width="122dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/Prenon"
+                    android:id="@+id/LabelPrenol"
+                    android:layout_marginLeft="5dp"
+                    android:ems="10"
+
+                    android:textSize="18dp"
+                    android:textColor="@color/colorPrimary" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editPrenom"
+                    android:inputType="none"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="18dp"
+                    android:layout_weight="0.88" />
+            </LinearLayout>
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+
+                android:layout_width="348dp"
+                android:layout_height="62dp"
+                tools:context=".ReadTag"
+                android:orientation="horizontal"
+                android:weightSum="1">
+                <TextView
+                    android:layout_width="122dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Date de naissance"
+                    android:id="@+id/LabelOganisation"
+                    android:layout_marginLeft="5dp"
+                    android:ems="10"
+
+                    android:textSize="18dp"
+                    android:textColor="@color/colorPrimary" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/EditOganisation"
+                    android:inputType="none"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="18dp"
+                    android:layout_weight="0.88" />
+            </LinearLayout>
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+
+                android:layout_width="348dp"
+                android:layout_height="62dp"
+                tools:context=".ReadTag"
+                android:orientation="horizontal"
+                android:weightSum="1">
+                <TextView
+                    android:layout_width="122dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/Email"
+                    android:id="@+id/LabelEmail"
+                    android:layout_marginLeft="5dp"
+                    android:ems="10"
+
+                    android:textSize="18dp"
+                    android:textColor="@color/colorPrimary" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/EditEmail"
+                    android:inputType="none"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="18dp"
+                    android:layout_weight="0.88" />
+            </LinearLayout>
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+
+                android:layout_width="348dp"
+                android:layout_height="62dp"
+                tools:context=".ReadTag"
+                android:orientation="horizontal"
+                android:weightSum="1">
+                <TextView
+                    android:layout_width="122dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/Tel"
+                    android:id="@+id/LabelTel"
+                    android:layout_marginLeft="5dp"
+                    android:ems="10"
+
+                    android:textSize="18dp"
+                    android:textColor="@color/colorPrimary" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/EditTel"
+                    android:inputType="none"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="18dp"
+                    android:layout_weight="0.88" />
+            </LinearLayout>
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+
+                    android:layout_width="348dp"
+                    android:layout_height="62dp"
+                    tools:context=".ReadTag"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+                <TextView
+                    android:layout_width="122dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/Adresse"
+                    android:id="@+id/LabelAdress"
+                    android:layout_marginLeft="5dp"
+                    android:ems="10"
+
+                    android:textSize="18dp"
+                    android:textColor="@color/colorPrimary" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/EditAdress"
+                    android:inputType="none"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="18dp"
+                    android:layout_weight="0.88" />
+            </LinearLayout>
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+
+                    android:layout_width="348dp"
+                    android:layout_height="62dp"
+                    tools:context=".ReadTag"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+                    <TextView
+                        android:layout_width="122dp"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="ID"
+                        android:id="@+id/LabelSkype"
+                        android:layout_marginLeft="5dp"
+                        android:ems="10"
+
+                        android:textSize="18dp"
+                        android:textColor="@color/colorPrimary" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/EditSkype"
+                        android:inputType="none"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="18dp"
+                        android:layout_weight="0.88" />
+                </LinearLayout>
+          <!--  <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+
+                android:layout_width="348dp"
+                android:layout_height="62dp"
+                tools:context=".ReadTag"
+                android:orientation="horizontal"
+                android:weightSum="1">
+                <TextView
+                    android:layout_width="122dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/Position"
+                    android:id="@+id/LabelPosition"
+                    android:layout_marginLeft="5dp"
+                    android:ems="10"
+
+                    android:textSize="18dp"
+                    android:textColor="@color/colorPrimary" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/EditPosition"
+                    android:inputType="none"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="18dp"
+                    android:layout_weight="0.88" />
+            </LinearLayout>-->
+
+          <!--  <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+
+                android:layout_width="348dp"
+                android:layout_height="62dp"
+                tools:context=".ReadTag"
+                android:orientation="horizontal"
+                android:weightSum="1">
+                <TextView
+                    android:layout_width="122dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/Fie"
+                    android:id="@+id/LabelFixe"
+                    android:layout_marginLeft="5dp"
+                    android:ems="10"
+
+                    android:textSize="18dp"
+                    android:textColor="@color/colorPrimary" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/EditFixe"
+                    android:inputType="none"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="18dp"
+                    android:layout_weight="0.88" />
+            </LinearLayout> -->
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+
+                android:layout_width="348dp"
+                android:layout_height="62dp"
+                tools:context=".ReadTag"
+                android:orientation="horizontal"
+                android:weightSum="1">
+                <TextView
+                    android:layout_width="122dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="solde"
+                    android:id="@+id/LabelFax"
+                    android:layout_marginLeft="5dp"
+                    android:ems="10"
+
+                    android:textSize="18dp"
+                    android:textColor="@color/colorPrimary" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/EditFax"
+                    android:inputType="none"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="18dp"
+                    android:layout_weight="0.88" />
+            </LinearLayout>
+            </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/LinearLayoutbutton"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp">
+
+
+    </RelativeLayout>
+
+</LinearLayout>
